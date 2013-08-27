@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="tutorialApp">
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+	<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"></link>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	<script src="js/main.js"></script>
+	<style>
+		.done-true {
+		  text-decoration: line-through;
+		  color: grey;
+		}
+	</style>
+  </head>
+  <body class="">
+  
+    <div class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="navbar-inner ">
+		   
+			<ul class="nav">
+			  <li ng-class='{"active":tog==1}' ng-click='tog=1'><a href="#">Home</a></li>
+			  <li ng-class='{"active":tog==2}' ng-click='tog=2'><a href="#/hello">Hello World</a></li>
+			  <li ng-class='{"active":tog==3}' ng-click='tog=3'><a href="#/todo">Todo List</a></li>
+			  <li ng-class='{"active":tog==4}' ng-click='tog=4'><a href="#/filter">Filter</a></li>
+			  <li ng-class='{"active":tog==5}' ng-click='tog=5'><a href="#/game">Game</a></li>
+			</ul>
+		  </div>
+	</div>
+	<div class="container-fluid" style="margin-top:50px;">
+	
+	    <div class="row-fluid">
+			<div class="span3 well">
+				<ul class="nav nav-list">
+				  <li ng-class='{"active":tog==1}' ng-click='tog=1'><a href="#">Home</a></li>
+				  <li ng-class='{"active":tog==2}' ng-click='tog=2'><a href="#/hello">Hello World</a></li>
+				  <li ng-class='{"active":tog==3}' ng-click='tog=3'><a href="#/todo">Todo List</a></li>
+				  <li ng-class='{"active":tog==4}' ng-click='tog=4'><a href="#/filter">Filter</a></li>
+				  <li ng-class='{"active":tog==5}' ng-click='tog=5'><a href="#/game">Game</a></li>
+				</ul>
+		  
+			</div>
+			<span class="span9">
+			  <div class="well">
+			   <div ng-view>
+		             
+			   </div>
+			  </div>
+			</span>
+		</div>
+
+</div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+
+<div class="span3">
+<label>Search by Name:</label>
+      <input type="text" ng-model="SearchName.name" placeholder="Enter a name here">
+      <hr>
+	  <ul>
+		<li ng-repeat="cust in customers| filter:SearchName" >{{cust.name + "-- "+ cust.city}}</li>
+	</ul>
+</div>
+<div class="span3">
+	<label>Search by city:</label>
+      <input type="text" ng-model="SearchCity.city" placeholder="Enter a name here">
+      <hr>
+	  <ul>
+		<li ng-repeat="cust in customers| filter:SearchCity" >{{cust.name + "-- "+ cust.city}}</li>
+	</ul>
+</div>
+<div style="clear:both"> </div>
